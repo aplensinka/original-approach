@@ -31,7 +31,7 @@ Elena->>Server: Привет! Я просто хочу узнать как ты?
 
 Server->>Queue: place message in queue
 
-Note over Server: SERVER FAILURE\n Messages cannot be delivered
+Note over Server: SERVER FAILURE - Messages cannot be delivered
 
 loop automatic resend
 Queue->>Server: retry delivery
