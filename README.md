@@ -21,16 +21,17 @@
 ```mermaid
 sequenceDiagram
 
+
 actor Elena
 actor Aleksander
 participant Server
 participant Queue
 
-Elena->>Server: Привет! Я просто хочу узнать как ты?\nПожалуйста, хватит добавлять меня\nв черный список.\nМне очень жаль, как всё развернулось
+Elena->>Server: Привет! Я просто хочу узнать как ты? Пожалуйста, хватит добавлять меня в черный список.
 
 Server->>Queue: place message in queue
 
-Note over Server: SERVER FAILURE\nMessages cannot be delivered
+Note over Server: SERVER FAILURE\n Messages cannot be delivered
 
 loop automatic resend
 Queue->>Server: retry delivery
@@ -45,7 +46,7 @@ Server->>Aleksander: deliver message
 alt normal response
 Server->>Elena: ok
 else alternative scenario
-Server->>Elena: Сделал гит приватным
+Server->>Elena: *Сделал гит приватным*
 end
 
 Elena->>Aleksander: Я пыталась
