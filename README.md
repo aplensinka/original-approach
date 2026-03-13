@@ -38,7 +38,7 @@ Queue->>Server: retry delivery
 Server--xAleksander: delivery failed
 end
 
-Note over Server,Aleksander: ≈ 3 YEARS LATER
+Note over Server,Aleksander: ≈ 2 YEARS LATER
 
 Queue->>Server: last retry
 Server->>Aleksander: deliver message
